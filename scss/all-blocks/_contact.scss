@@ -1,0 +1,194 @@
+.contact {
+    margin-top: 200px;
+    text-align: center;
+
+    .title {
+        margin-bottom: 45px;
+
+        span {
+            font-size: 2rem;
+            padding: 5px 20px;
+            background: crimson;
+            border-radius: 0.3rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    &__main {
+        color: #fff;
+        display: flex;
+        text-align: left;
+
+        &--left {
+            background: #000;
+            width: 50%;
+            padding: 30px;
+
+            h1 {
+                letter-spacing: 2px;
+                font-weight: 400;
+                font-size: 2rem;
+                color: crimson;
+                font-weight: 600;
+            }
+
+            p {
+                letter-spacing: 1px;
+                line-height: 30px;
+                padding: 40px 0px;
+            }
+        }
+
+        &--right {
+            background: crimson;
+            width: 50%;
+            padding: 50px 40px;
+
+            h2 {
+                font-size: 2rem;
+                font-weight: 400;
+                letter-spacing: 1px;
+                padding-bottom: 40px;
+            }
+
+            form {
+                font-family: 'Courier New', Courier, monospace;
+
+                .name {
+                    display: flex;
+
+                    input {
+                        padding: 10px;
+                        width: 100%;
+                        letter-spacing: 1px;
+                        border: none;
+
+                        &+input {
+                            margin-left: 5px;
+                        }
+                    }
+                }
+
+                .email {
+                    display: flex;
+                    margin-top: 5px;
+
+                    input {
+                        padding: 10px;
+                        width: 100%;
+                        letter-spacing: 1px;
+                        border: none;
+
+                        &+input {
+                            margin-left: 5px;
+                        }
+
+                    }
+                }
+
+                .text {
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    width: 100%;
+                    height: 100px;
+                    resize: none;
+                    border: none;
+                    padding: 10px;
+                    font-family: 'Courier New', Courier, monospace;
+                }
+            }
+
+            .btn {
+                padding: 10px 25px;
+                font-size: 1.2rem;
+                border: none;
+                background: #000;
+                color: crimson;
+                border-radius: 0.4rem;
+                transition: all 0.2s;
+
+                &:hover {
+                    opacity: 0.6;
+                    cursor: pointer;
+                }
+
+                &:active {
+                    opacity: 1;
+                }
+            }
+
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .contact {
+        &__main {
+            display: block;
+
+            &--left {
+                width: 100%;
+            }
+
+            &--right {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 475px) {
+    .contact {
+
+        .title {
+            span {
+                font-size: 1.5rem;
+                padding: 5px 10px;
+            }
+        }
+
+        &__main {
+            &--left {
+                width: 97%; 
+                padding: 20px 20px;
+
+
+               p {
+                   font-size: 15px;
+                   line-height: 25px;
+                   text-align: justify;
+                   padding: 10px 0;
+               }
+            }
+            &--right {
+                width: 97%;
+                padding: 20px 20px;
+
+                form {
+                    .name {
+                        display: block;
+                        input {
+                            
+                            & + input {
+                                margin: 10px 0;
+                            }
+                        }
+                    }
+                    .email {
+                        display: block;
+
+                        input {
+
+                            & + input {
+                                margin: 10px 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

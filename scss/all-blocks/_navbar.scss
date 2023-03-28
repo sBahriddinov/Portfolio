@@ -1,0 +1,142 @@
+.navbar {
+    width: 100%;
+    padding: 15px 0;
+    background: crimson;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+
+    &__main {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+        .logo {
+            width: 300px;
+            line-height: 25px;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 50px;
+            }
+
+            a {
+                color: #fff;
+                font-size: 28px;
+                font-weight: 600;
+                transition: all 0.4s;
+                font-family: 'Courier New', Courier, monospace;
+
+                span {
+                    color: #000;
+                    font-family: 'Courier New', Courier, monospace;
+
+                }
+            }
+
+        }
+
+        .menu {
+
+            li {
+                display: inline-block;
+
+                a {
+                    color: #fff;
+                    font-size: 18px;
+                    font-weight: 500;
+                    margin-left: 25px;
+                    transition: all 0.3s;
+
+                    &:hover {
+                        color: #000;
+                    }
+                }
+
+            }
+
+        }
+
+        // Menu style section
+
+        .menu-btn {
+            color: #fff;
+            font-size: 3rem;
+            cursor: pointer;
+            display: none;
+        }
+
+    }
+
+}
+
+// Media query section style 
+@media only screen and (max-width: 768px) {
+    .navbar {
+        color: crimson;
+
+        &__main {
+            .menu {
+                display: none;
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+                width: 100%;
+                background: #222222c8;
+                position: absolute;
+                top: 85px;
+                left: 0;
+                z-index: 111;
+                padding: 10px;
+
+
+                li {
+                    display: block;
+                    margin-top: 10px;
+                    padding: 10px 5px;
+                    width: 100%;
+                    border: 2px solid red;
+                    background: #000;
+
+                    a {
+                        width: 100%;
+                        font-size: 1.2rem;
+                        color: #fff;
+                    }
+                }
+            }
+
+            // Menu bar section style
+            .menu-btn {
+                display: block;
+            }
+            .active {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                display: block;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 475px) {
+    .navbar {
+
+        &__main {
+            
+            .logo {
+
+                img {
+                    width: 40px;
+                }
+                a {
+                    font-size: 25px;
+                    line-height: 18px;
+
+                }
+            }
+        }
+    }
+}

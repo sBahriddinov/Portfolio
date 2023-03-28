@@ -1,0 +1,104 @@
+.service {
+    margin-top: 200px;
+
+    &__main {
+
+        .title {
+            text-align: center;
+            margin: 40px 0;
+
+            span {
+                font-size: 2rem;
+                padding: 5px 20px;
+                background: crimson;
+                border-radius: 0.3rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.3);
+            }
+        }
+
+        &--card {
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            z-index: -111;
+
+            .wrapper {
+                width: 17rem;
+                background: #050505;
+                border-radius: 0.3rem;
+                text-align: center;
+                transition: all 0.4s;
+
+                &:hover {
+                    background: crimson;
+                    // transform: scale(1.1, 1.1);
+                    cursor: pointer;
+                    color: #000;
+                }
+
+                i {
+                    font-size: 3rem;
+                    padding: 20px 0;
+                }
+
+                p {
+                    padding-top: 15px;
+                    padding-bottom: 30px;
+                    padding-left: 15px;
+                    padding-right: 5px;
+                    text-align: left;
+                    font-size: 0.9rem;
+                    line-height: 20px;
+
+                    span {
+                        color: crimson;
+                        font-weight: 600;
+                        font-size: 1rem;
+                        transition: all 0.4s;
+                    }
+                }
+
+                &:hover span {
+                    color: #fff;
+                }
+
+            }
+        }
+
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .service {
+        &__main {
+
+            &--card {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+
+
+                .wrapper {
+                    margin: 10px 0px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 475px) {
+    .service {
+
+        &__main {
+
+            .title {
+                span {
+                    font-size: 1.5rem;
+                    padding: 5px 10px;
+                }
+            }
+        }
+    }
+}

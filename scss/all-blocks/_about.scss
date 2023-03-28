@@ -1,0 +1,121 @@
+.about {
+    margin-top: 200px;
+
+    &__main {
+        display: flex;
+
+        img {
+            width: 400px;
+            box-shadow: 0px 0px 25px crimson;
+            border-radius: 0.4rem;
+        }
+
+        &--text {
+            margin-left: 3rem;
+
+            .title {
+                margin: 40px 0px;
+
+                span {
+                    font-size: 2rem;
+                    padding: 5px 20px;
+                    background: crimson;
+                    border-radius: 0.3rem;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.3);
+                }
+            }
+
+            p {
+                width: 600px;
+                line-height: 25px;
+                letter-spacing: 0.225px;
+            }
+
+            button {
+                margin-top: 7%;
+                padding: 15px 20px;
+                border: none;
+                background: crimson;
+                color: #000;
+                font-weight: 600;
+                letter-spacing: 1px;
+                border-radius: 0.2rem;
+                transition: all 0.3s;
+
+                &:hover {
+                    cursor: pointer;
+                    background: #000;
+                    color: crimson;
+                }
+            }
+
+        }
+    }
+}
+
+// Media section style
+@media only screen and (max-width: 768px) {
+    .about {
+        text-align: center;
+
+        &__main {
+            display: block;
+
+            &--text {
+                .title {
+                    margin-left: -8%;
+                }
+
+                p {
+                    width: 600px;
+                    text-align: justify;
+                }
+            }
+
+            button {
+                margin-left: -50px;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 475px) {
+    .about {
+        margin-top: 100px;
+
+        &__main {
+
+            img {
+                width: 300px;
+            }
+
+            &--text {
+
+
+                .title {
+                    span {
+                        font-size: 1.5rem;
+                        padding: 5px 10px;
+                    }
+                }
+
+                p {
+                    width: 300px;
+                    font-size: 12px;
+
+                }
+
+            }
+
+            button {
+                font-size: 12px;
+                padding: 10px 20px;
+                // margin-left: -6%;
+            }
+        }
+
+    }
+}
